@@ -1,6 +1,6 @@
 # Cafe-and-Grocery(shop)-Program
 # 1.
-
+<br>
 ct,cc,cp=0,0,0
 while True:
   ch=int(input("enter your choice\n1.tea\n2.coffee\n3.pizza"))
@@ -27,9 +27,9 @@ while True:
       print(f"Total\t\t{ct+cc+cp}\t\t{total}")
       print("visit again!thank you")
       break
-
+<br>
 # 2.( Initialize quantities for Super Bazar items)
-
+<br>
 sugar_q, rice_q, oil_q, milk_q = 0, 0, 0, 0
 
 print("Welcome to Super Bazar!")
@@ -82,3 +82,4 @@ while True:
                 break
     except ValueError:
         print("Invalid input. Please enter a number.")
+<br>
