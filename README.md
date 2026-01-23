@@ -1,10 +1,10 @@
 # Cafe-and-Grocery(shop)-Program
 # 1.
-<br>
-ct,cc,cp=0,0,0
-while True:
-  ch=int(input("enter your choice\n1.tea\n2.coffee\n3.pizza"))
-  match(ch):
+    <br>
+    ct,cc,cp=0,0,0
+    while True:
+    ch=int(input("enter your choice\n1.tea\n2.coffee\n3.pizza"))
+    match(ch):
     case 1:
       print("tea selected")
       ct+=1
@@ -27,15 +27,15 @@ while True:
       print(f"Total\t\t{ct+cc+cp}\t\t{total}")
       print("visit again!thank you")
       break
-<br>
+    <br>
 # 2.( Initialize quantities for Super Bazar items)
-<br>
-sugar_q, rice_q, oil_q, milk_q = 0, 0, 0, 0
+    <br>
+    sugar_q, rice_q, oil_q, milk_q = 0, 0, 0, 0
 
-print("Welcome to Super Bazar!")
-print("Enter the item number to add to your cart. Enter 0 or any other number to checkout.")
+    print("Welcome to Super Bazar!")
+    print("Enter the item number to add to your cart. Enter 0 or any other number to checkout.")
 
-while True:
+    while True:
     try:
         print("\n1. Sugar (1kg) - ₹45\n2. Rice (1kg) - ₹60\n3. Cooking Oil (1L) - ₹120\n4. Milk (1L) - ₹55")
         ch = int(input("Enter your choice: "))
@@ -82,4 +82,4 @@ while True:
                 break
     except ValueError:
         print("Invalid input. Please enter a number.")
-<br>
+    <br>
