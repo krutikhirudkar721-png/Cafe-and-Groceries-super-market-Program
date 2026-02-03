@@ -1,5 +1,6 @@
 # Cafe-and-Grocery(shop)-Program
 # 1.
+
     <br>
     ct,cc,cp=0,0,0
     while True:
@@ -28,7 +29,9 @@
       print("visit again!thank you")
       break
     <br>
+    
 # 2.( Initialize quantities for Super Bazar items)
+
     <br>
     sugar_q, rice_q, oil_q, milk_q = 0, 0, 0, 0
 
