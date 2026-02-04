@@ -27,7 +27,7 @@
       print(f"Total\t\t{ct+cc+cp}\t\t{total}")
       print("visit again!thank you")
       break
-    <br>
+      
     
 # 2.( Initialize quantities for Super Bazar items)
 
