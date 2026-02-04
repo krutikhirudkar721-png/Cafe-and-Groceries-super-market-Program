@@ -31,7 +31,7 @@
     
 # 2.( Initialize quantities for Super Bazar items)
 
-    <br>
+    
     sugar_q, rice_q, oil_q, milk_q = 0, 0, 0, 0
 
     print("Welcome to Super Bazar!")
