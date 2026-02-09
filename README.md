@@ -32,56 +32,84 @@
 # 2.( Initialize quantities for Super Bazar items)
 
     
-    sugar_q, rice_q, oil_q, milk_q = 0, 0, 0, 0
+  # Item Database: Easily add or change prices here
+items = {
+    1: {"name": "Sugar", "price": 45, "unit": "kg"},
+    2: {"name": "Rice", "price": 60, "unit": "kg"},
+    3: {"name": "Cooking Oil", "price": 120, "unit": "L"},
+    4: {"name": "Milk", "price": 55, "unit": "L"}
+}
 
-    print("Welcome to Super Bazar!")
-    print("Enter the item number to add to your cart. Enter 0 or any other number to checkout.")
+cart = {} # Stores {item_id: quantity}
+print("Welcome to Super Bazar!")
 
-    while True:
+while True:
+    print("\n" + "-"*20 + " MENU " + "-"*20)
+    for idx, info in items.items():
+        print(f"{idx}. {info['name']} ({1}{info['unit']}) - ₹{info['price']}")
+    
     try:
-        print("\n1. Sugar (1kg) - ₹45\n2. Rice (1kg) - ₹60\n3. Cooking Oil (1L) - ₹120\n4. Milk (1L) - ₹55")
-        ch = int(input("Enter your choice: "))
+        ch = int(input("\nEnter item number to add (0 to Checkout): "))
         
-        match(ch):
-            case 1:
-                qty = int(input("Enter quantity for Sugar: "))
-                sugar_q += qty
-                print(f"Added {qty}kg Sugar")
-            case 2:
-                qty = int(input("Enter quantity for Rice: "))
-                rice_q += qty
-                print(f"Added {qty}kg Rice")
-            case 3:
-                qty = int(input("Enter quantity for Oil: "))
-                oil_q += qty
-                print(f"Added {qty}L Oil")
-            case 4:
-                qty = int(input("Enter quantity for Milk: "))
-                milk_q += qty
-                print(f"Added {qty}L Milk")
-            case _:
-                # Calculate totals
-                total_sugar = sugar_q * 45
-                total_rice = rice_q * 60
-                total_oil = oil_q * 120
-                total_milk = milk_q * 55
-                grand_total = total_sugar + total_rice + total_oil + total_milk
-                
-                # Generate Final Bill
-                print("\n" + "="*35)
-                print("         SUPER BAZAR RECEIPT")
-                print("="*35)
-                print("Items\t\tQty\tAmount")
-                print("-" * 35)
-                if sugar_q > 0: print(f"Sugar\t\t{sugar_q}\t₹{total_sugar}")
-                if rice_q > 0:  print(f"Rice\t\t{rice_q}\t₹{total_rice}")
-                if oil_q > 0:   print(f"Oil\t\t{oil_q}\t₹{total_oil}")
-                if milk_q > 0:  print(f"Milk\t\t{milk_q}\t₹{total_milk}")
-                print("-" * 35)
-                print(f"TOTAL AMOUNT:\t\t₹{grand_total}")
-                print("="*35)
-                print("Thank you for shopping! Visit again.")
-                break
+        if ch == 0:
+            break
+        elif ch in items:
+            qty = int(input(f"Enter quantity for {items[ch]['name']}: "))
+            if qty > 0:
+                cart[ch] = cart.get(ch, 0) + qty
+                print(f"Added {qty}{items[ch]['unit']} {items[ch]['name']}")
+        else:
+            print("Item not found. Try again.")
+            
     except ValueError:
-        print("Invalid input. Please enter a number.")
-    <br>
+        print("Please enter a valid number.")
+
+# Final Bill Generation
+# Item Database: Easily add or change prices here
+items = {
+    1: {"name": "Sugar", "price": 45, "unit": "kg"},
+    2: {"name": "Rice", "price": 60, "unit": "kg"},
+    3: {"name": "Cooking Oil", "price": 120, "unit": "L"},
+    4: {"name": "Milk", "price": 55, "unit": "L"}
+}
+
+cart = {} # Stores {item_id: quantity}
+print("Welcome to Super Bazar!")
+
+while True:
+    print("\n" + "-"*20 + " MENU " + "-"*20)
+    for idx, info in items.items():
+        print(f"{idx}. {info['name']} ({1}{info['unit']}) - ₹{info['price']}")
+    
+    try:
+        ch = int(input("\nEnter item number to add (0 to Checkout): "))
+        
+        if ch == 0:
+            break
+        elif ch in items:
+            qty = int(input(f"Enter quantity for {items[ch]['name']}: "))
+            if qty > 0:
+                cart[ch] = cart.get(ch, 0) + qty
+                print(f"Added {qty}{items[ch]['unit']} {items[ch]['name']}")
+        else:
+            print("Item not found. Try again.")
+            
+    except ValueError:
+        print("Please enter a valid number.")
+
+# Final Bill Generation
+print(f"\n{'='*40}\n{'SUPER BAZAR RECEIPT':^40}\n{'='*40}")
+print(f"{'Item':<15} {'Qty':<10} {'Price':<10} {'Total'}")
+print("-" * 40)
+
+grand_total = 0
+for item_id, quantity in cart.items():
+    details = items[item_id]
+    item_total = quantity * details['price']
+    grand_total += item_total
+    print(f"{details['name']:<15} {quantity:<10} ₹{details['price']:<10} ₹{item_total}")
+
+print("-" * 40)
+print(f"{'GRAND TOTAL:':<32} ₹{grand_total}")
+print(f"{'='*40}\nThank you for shopping!")
+
