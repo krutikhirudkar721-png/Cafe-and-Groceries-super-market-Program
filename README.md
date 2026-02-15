@@ -97,7 +97,6 @@
                 print("Please enter a valid number.")
 
 # Final Bill Generation
-
         print(f"\n{'='*40}\n{'SUPER BAZAR RECEIPT':^40}\n{'='*40}")
         print(f"{'Item':<15} {'Qty':<10} {'Price':<10} {'Total'}")
         print("-" * 40)
