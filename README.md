@@ -28,27 +28,23 @@
       print("visit again!thank you")
       break
       
-    
 # 2.( Initialize quantities for Super Bazar items)
 # Item Database: Easily add or change prices here
+
         items = {
             1: {"name": "Sugar", "price": 45, "unit": "kg"},
             2: {"name": "Rice", "price": 60, "unit": "kg"},
             3: {"name": "Cooking Oil", "price": 120, "unit": "L"},
             4: {"name": "Milk", "price": 55, "unit": "L"}
         }
-
         cart = {} # Stores {item_id: quantity}
         print("Welcome to Super Bazar!")
-
         while True:
             print("\n" + "-"*20 + " MENU " + "-"*20)
             for idx, info in items.items():
                 print(f"{idx}. {info['name']} ({1}{info['unit']}) - ₹{info['price']}")
-    
             try:
                 ch = int(input("\nEnter item number to add (0 to Checkout): "))
-        
                 if ch == 0:
                     break
                 elif ch in items:
@@ -58,7 +54,6 @@
                         print(f"Added {qty}{items[ch]['unit']} {items[ch]['name']}")
                 else:
                     print("Item not found. Try again.")
-            
             except ValueError:
                 print("Please enter a valid number.")
 
