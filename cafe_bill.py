@@ -1,4 +1,4 @@
-# Cafe-and-Grocery shop - Program
+# Cafe- Program
 # USING PYTHON PROGRAMIMG
 # 1.
 
