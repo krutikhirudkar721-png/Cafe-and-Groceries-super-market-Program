@@ -30,7 +30,6 @@
         
 # 2.( Initialize quantities for Super Bazar items)
 # Item Database: Easily add or change prices here
-
         items = {
             1: {"name": "Sugar", "price": 45, "unit": "kg"},
             2: {"name": "Rice", "price": 60, "unit": "kg"},
