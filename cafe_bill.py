@@ -1,6 +1,7 @@
 # Cafe- Program
 # USING PYTHON PROGRAMIMG
 # 1.
+
     ct,cc,cp=0,0,0
     while True:
     ch=int(input("enter your choice\n1.tea\n2.coffee\n3.pizza"))
