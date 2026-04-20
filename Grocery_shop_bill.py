@@ -73,7 +73,6 @@ items = {
             item_total = quantity * details['price']
             grand_total += item_total
             print(f"{details['name']:<15} {quantity:<10} ₹{details['price']:<10} ₹{item_total}")
-
         print("-" * 40)
         print(f"{'GRAND TOTAL:':<32} ₹{grand_total}")
         print(f"{'='*40}\nThank you for shopping!")
