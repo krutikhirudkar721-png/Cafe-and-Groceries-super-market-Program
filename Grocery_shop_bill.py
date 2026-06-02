@@ -7,6 +7,7 @@ items = {
             3: {"name": "Cooking Oil", "price": 120, "unit": "L"},
             4: {"name": "Milk", "price": 55, "unit": "L"}
         }
+
         cart = {} 
 # Stores {item_id: quantity}
         print("Welcome to Super Bazar!")
