@@ -8,7 +8,9 @@ items = {
             4: {"name": "Milk", "price": 55, "unit": "L"}
         }
         cart = {} 
+
 # Stores {item_id: quantity}
+
         print("Welcome to Super Bazar!")
         while True:
             print("\n" + "-"*20 + " MENU " + "-"*20)
