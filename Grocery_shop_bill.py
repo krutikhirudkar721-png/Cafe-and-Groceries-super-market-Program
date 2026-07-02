@@ -10,6 +10,7 @@ items = {
         cart = {} 
 
 # Stores {item_id: quantity}
+
         print("Welcome to Super Bazar!")
         while True:
             print("\n" + "-"*20 + " MENU " + "-"*20)
